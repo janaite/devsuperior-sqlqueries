@@ -10,7 +10,7 @@ import dev.janaite.uri2602.projections.CustomerMinProjection;
 
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
-	@Query(nativeQuery = true, value = "SELECT name FROM customers WHERE state = :state")
+	@Query(nativeQuery = true, value = "SELECT name FROM customers WHERE UPPER(state) = UPPER(:state)")
 	List<CustomerMinProjection> search1(String state);
 
 }

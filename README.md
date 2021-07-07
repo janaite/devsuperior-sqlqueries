@@ -36,3 +36,7 @@ Concepts:
 - Inner join with native query
 - Inner join with JPQL query
 
+# uri2621
+
+Concepts:
+- LIKE and BETWEEN usage with native query

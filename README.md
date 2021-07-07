@@ -29,3 +29,8 @@ Concepts:
 References:
 - <https://www.baeldung.com/spring-data-jpa-projections>
 - <https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#projections>
+
+## uri2611
+
+Concepts:
+- Inner join with native query

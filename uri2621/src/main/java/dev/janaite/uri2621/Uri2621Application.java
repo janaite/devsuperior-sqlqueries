@@ -24,8 +24,14 @@ public class Uri2621Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		
+		System.out.println("Native Query");
 		List<ProductMinProjection> list = repository.search1(10, 20, "P");
 		List<ProductMinDTO> result1 = list.stream().map(x -> new ProductMinDTO(x)).collect(Collectors.toList());
 		result1.forEach(System.out::println);
+		
+		System.out.println("JPQL Query");
+		List<ProductMinDTO> result2 = repository.search2(10, 20, "P");
+		result2.forEach(System.out::println);
 	}
 }

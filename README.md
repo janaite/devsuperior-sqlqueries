@@ -40,3 +40,5 @@ Concepts:
 
 Concepts:
 - LIKE and BETWEEN usage with native query
+- LIKE and BETWEEN usage with JPQL query
+

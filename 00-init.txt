@@ -1,0 +1,18 @@
+#!/bin/bash
+set -e
+
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
+    CREATE DATABASE uri2602;
+    CREATE DATABASE uri2609;
+    CREATE DATABASE uri2611;
+    CREATE DATABASE uri2621;
+    CREATE DATABASE uri2737;
+    CREATE DATABASE uri2990;
+EOSQL
+
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "uri2602" < /docker-entrypoint-initdb.d/2602.txt
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "uri2609" < /docker-entrypoint-initdb.d/2609.txt
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "uri2611" < /docker-entrypoint-initdb.d/2611.txt
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "uri2621" < /docker-entrypoint-initdb.d/2621.txt
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "uri2737" < /docker-entrypoint-initdb.d/2737.txt
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "uri2990" < /docker-entrypoint-initdb.d/2990.txt

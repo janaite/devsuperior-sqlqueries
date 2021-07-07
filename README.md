@@ -34,3 +34,5 @@ References:
 
 Concepts:
 - Inner join with native query
+- Inner join with JPQL query
+

@@ -1,6 +1,6 @@
 package dev.janaite.uri2611;
 
-import java.util.List;import java.util.stream.Collector;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,5 +29,9 @@ public class Uri2611Application implements CommandLineRunner {
 		List<MovieMinProjection> list = repository.search1("Action");
 		List<MovieMinDTO> result1 = list.stream().map(x -> new MovieMinDTO(x)).collect(Collectors.toList());
 		result1.forEach(System.out::println);
+		
+		System.out.println("JPQL Query");
+		List<MovieMinDTO> result2 = repository.search2("Action");
+		result2.forEach(System.out::println);
 	}
 }

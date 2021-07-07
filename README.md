@@ -2,6 +2,7 @@
 
 The studies are based on <www.urionlinejudge.com.br> problems using Spring Boot.
 
+JPA reference: <https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference>
 
 ## Docker
 
@@ -18,3 +19,13 @@ databases:
 - uri2621
 - uri2737
 - uri2990
+
+## uri2602
+
+Concepts:
+- Projections
+- Native SQL queries
+
+References:
+- <https://www.baeldung.com/spring-data-jpa-projections>
+- <https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#projections>

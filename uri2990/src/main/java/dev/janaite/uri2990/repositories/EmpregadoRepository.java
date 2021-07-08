@@ -28,6 +28,4 @@ public interface EmpregadoRepository extends JpaRepository<Empregado, Long> {
 			+ "WHERE t.cpf_emp IS NULL "
 			+ "ORDER BY e.cpf ")
 	List<EmpregadoDeptProjection> search2();
-	
-	
 }

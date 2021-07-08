@@ -47,3 +47,8 @@ Concepts:
 Concepts:
 - GROUP BY with native query
 - GROUP BY with JPQL query
+
+# uri2737
+
+Concepts:
+- UNION with native query

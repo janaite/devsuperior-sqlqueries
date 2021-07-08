@@ -33,22 +33,32 @@ References:
 ## uri2611
 
 Concepts:
-- Inner join with native query
-- Inner join with JPQL query
+- Inner join in native query
+- Inner join in JPQL query
 
 # uri2621
 
 Concepts:
-- LIKE and BETWEEN usage with native query
-- LIKE and BETWEEN usage with JPQL query
+- LIKE and BETWEEN usage in native query
+- LIKE and BETWEEN usage in JPQL query
 
 # uri2609
 
 Concepts:
-- GROUP BY with native query
-- GROUP BY with JPQL query
+- GROUP BY in native query
+- GROUP BY in JPQL query
 
 # uri2737
 
 Concepts:
-- UNION with native query
+- UNION in native query
+
+# uri2990
+
+Concepts:
+- LEFT JOIN in native query
+- NOT IN with subquery in native query
+
+Diagram:
+
+![diagram2990](./diagram2990.png)

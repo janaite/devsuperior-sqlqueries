@@ -34,5 +34,9 @@ public class Uri2990Application implements CommandLineRunner {
 		List<EmpregadoDeptProjection> list2 = repository.search2();
 		List<EmpregadoDeptDTO> result2 = list2.stream().map(x -> new EmpregadoDeptDTO(x)).collect(Collectors.toList());
 		result2.forEach(System.out::println);
+		
+		System.out.println("JPQL query (1)");
+		List<EmpregadoDeptDTO> result3 = repository.search3();
+		result3.forEach(System.out::println);
 	}
 }

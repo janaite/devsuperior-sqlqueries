@@ -58,6 +58,7 @@ Concepts:
 Concepts:
 - LEFT JOIN in native query
 - NOT IN with subquery in native query
+- NOT IN in JPQL query
 
 Diagram:
 

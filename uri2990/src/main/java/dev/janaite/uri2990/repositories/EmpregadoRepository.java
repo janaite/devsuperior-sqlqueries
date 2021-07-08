@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
+import dev.janaite.uri2990.dto.EmpregadoDeptDTO;
 import dev.janaite.uri2990.entities.Empregado;
 import dev.janaite.uri2990.projections.EmpregadoDeptProjection;
 
@@ -28,4 +29,14 @@ public interface EmpregadoRepository extends JpaRepository<Empregado, Long> {
 			+ "WHERE t.cpf_emp IS NULL "
 			+ "ORDER BY e.cpf ")
 	List<EmpregadoDeptProjection> search2();
+	
+	@Query("SELECT new dev.janaite.uri2990.dto.EmpregadoDeptDTO(e.cpf, e.enome, e.departamento.dnome) "
+			+ "FROM Empregado e "
+			+ "WHERE e.cpf NOT IN "
+			+ "( "
+			+ "SELECT obj.cpf FROM Empregado obj "
+			+ "INNER JOIN obj.projetosOndeTrabalha "
+			+ ") "
+			+ "ORDER BY e.cpf ")
+	List<EmpregadoDeptDTO> search3();
 }

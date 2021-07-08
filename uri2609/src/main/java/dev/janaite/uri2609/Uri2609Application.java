@@ -24,8 +24,15 @@ public class Uri2609Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		
+		System.out.println("Native query");
 		List<CategorySumProjection> list = repository.search1();
 		List<CategorySumDTO> result1 = list.stream().map(obj -> new CategorySumDTO(obj)).collect(Collectors.toList());
 		result1.forEach(System.out::println);
+		
+		System.out.println("JPQL query");
+		List<CategorySumDTO> result2 = repository.search2();
+		result2.forEach(System.out::println);
+
 	}
 }

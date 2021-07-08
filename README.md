@@ -46,3 +46,4 @@ Concepts:
 
 Concepts:
 - GROUP BY with native query
+- GROUP BY with JPQL query

@@ -42,3 +42,7 @@ Concepts:
 - LIKE and BETWEEN usage with native query
 - LIKE and BETWEEN usage with JPQL query
 
+# uri2609
+
+Concepts:
+- GROUP BY with native query
